@@ -57,7 +57,7 @@ public class BooksController {
 	
 	@DeleteMapping("/{id}")
 	public ResponseEntity<Boolean> deleteBookById(@PathVariable Long id) {
-		
+		System.out.println("we are checking");
 		return ResponseEntity.status(204).body(bookServices.deleteBookById(id));
 	}
 	
