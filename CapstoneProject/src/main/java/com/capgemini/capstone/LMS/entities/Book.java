@@ -1,0 +1,28 @@
+package com.capgemini.capstone.LMS.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Book {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long bookId;
+	private String ImgSrc;
+	private String Title;
+	private Long AuthorId;
+	private String Genre;
+	private Long TotalCopies;
+	private Long AvailableCopies;
+	
+}
